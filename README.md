@@ -217,8 +217,33 @@ Tests include: basic operations, conditionals, multi-step execution, precision, 
 
 ## Public Exposure
 
+### Current Public Endpoint
+
+```
+https://semisacred-britta-nonrefractive.ngrok-free.dev
+```
+
+**Status:** Active ✅
+
+### Test the Public API
+
 ```bash
-# Using ngrok
+# Health check
+curl -s https://semisacred-britta-nonrefractive.ngrok-free.dev/health | python3 -m json.tool
+
+# Execute with seed
+curl -s -X POST https://semisacred-britta-nonrefractive.ngrok-free.dev/execute \
+  -H "Content-Type: application/json" \
+  -d '{"prompt": "Generate a random number and multiply by 10", "seed": 42}' | python3 -m json.tool
+```
+
+### Setup Your Own Public Endpoint
+
+```bash
+# Configure ngrok with your token
+ngrok config add-authtoken YOUR_TOKEN
+
+# Start ngrok
 ngrok http 8000
 ```
 
