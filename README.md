@@ -2,6 +2,8 @@
 
 A FastAPI server that executes mathematical operations on random numbers via natural language prompts.
 
+![Demo](public/demo.gif)
+
 ## Overview
 
 Converts natural language instructions into safe mathematical operations on random numbers using OpenAI for parsing and a custom interpreter for execution.
@@ -222,5 +224,5 @@ ngrok http 8000
 
 ## License
 
-MIT
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
